@@ -3,10 +3,10 @@
 # To install this gets put into our shared-lib in the
 # shared_preload_libraries list in postgresql.conf
 
-CFLAGS=-fPIC -I/usr/local/pgsql/include/server
+CFLAGS=-fPIC -I${PG_LB_PATH}
 LDFLAGS=-shared
 
-PG_INSTALL_DIR=/usr/local/pgsql
+PG_INSTALL_DIR=${PG_INSTALL_PATH}
 
 TARGET=remote_planner.so
 
